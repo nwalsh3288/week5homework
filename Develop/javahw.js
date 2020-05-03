@@ -12,6 +12,47 @@ $("#currentDay").append(d);
 $(document).ready(function(){
    
 
+    var retrieveText1 = localStorage.getItem("one oclock");
+    var retrieveText2 = localStorage.getItem("two oclock");
+    var retrieveText3 = localStorage.getItem("three oclock");
+    var retrieveText4 = localStorage.getItem("four oclock");
+    var retrieveText5 = localStorage.getItem("five oclock");
+    var retrieveText6 = localStorage.getItem("six oclock");
+    var retrieveText7 = localStorage.getItem("seven oclock");
+    var retrieveText8 = localStorage.getItem("eight oclock");
+    var retrieveText9 = localStorage.getItem("nine oclock");
+    var retrieveText10 = localStorage.getItem("ten oclock");
+    var retrieveText11 = localStorage.getItem("elevn oclock");
+    var retrieveText12 = localStorage.getItem("twelve oclock");
+    var parse1 = JSON.parse(retrieveText1);
+    var parse2 = JSON.parse(retrieveText2);
+    var parse3 = JSON.parse(retrieveText3);
+    var parse4 = JSON.parse(retrieveText4);
+    var parse5 = JSON.parse(retrieveText5);
+    var parse6 = JSON.parse(retrieveText6);
+    var parse7 = JSON.parse(retrieveText7);
+    var parse8 = JSON.parse(retrieveText8);
+    var parse9 = JSON.parse(retrieveText9);
+    var parse10 = JSON.parse(retrieveText10);
+    var parse11 = JSON.parse(retrieveText11);
+    var parse12 = JSON.parse(retrieveText12);
+    console.log(parse1, parse2);
+
+
+    $("#one").html(parse1);
+    $("#two").html(parse2);
+    $("#three").html(parse3);
+    $("#four").html(parse4);
+    $("#five").html(parse5);
+    $("#six").html(parse6);
+    $("#seven").html(parse7);
+    $("#eight").html(parse8);
+    $("#nine").html(parse9);
+    $("#ten").html(parse10);
+    $("#eleven").html(parse11);
+    $("#twelve").html(parse12);
+
+
     // WHEN I click the save button for that timeblock      
         // logic .onclick and save/grab what user had entered
 
@@ -19,17 +60,12 @@ $(document).ready(function(){
             // capture textbox content by moving through the DOM from save1 to associated textbox
             // setting varrible to texted entered in textbox
             var textEnteredIntoField = $(this)[0].parentNode.children[1].children[0].children[0].value
-            console.log(textEnteredIntoField);
+            // console.log(textEnteredIntoField);
             // setting varrible to html "save" attribute
             var elementBeingClickedOn = $(this).attr("data-time");
-            console.log(elementBeingClickedOn);
+            // console.log(elementBeingClickedOn);
             localStorage.setItem(elementBeingClickedOn, JSON.stringify(textEnteredIntoField));
            
-            var retrieveText = localStorage.getItem(elementBeingClickedOn);
-            var parse = JSON.parse(retrieveText)
-            console.log(parse);
-
-            var display 
         });
     
     
