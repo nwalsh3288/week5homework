@@ -11,7 +11,7 @@ $("#currentDay").append(d);
 
 $(document).ready(function(){
    
-
+// retrieve key from local storage
     var retrieveText1 = localStorage.getItem("one oclock");
     var retrieveText2 = localStorage.getItem("two oclock");
     var retrieveText3 = localStorage.getItem("three oclock");
@@ -24,6 +24,8 @@ $(document).ready(function(){
     var retrieveText10 = localStorage.getItem("ten oclock");
     var retrieveText11 = localStorage.getItem("elevn oclock");
     var retrieveText12 = localStorage.getItem("twelve oclock");
+
+// parse text value from local storage
     var parse1 = JSON.parse(retrieveText1);
     var parse2 = JSON.parse(retrieveText2);
     var parse3 = JSON.parse(retrieveText3);
@@ -39,6 +41,7 @@ $(document).ready(function(){
     console.log(parse1, parse2);
 
 
+// display on HTML with text box ID
     $("#one").html(parse1);
     $("#two").html(parse2);
     $("#three").html(parse3);
@@ -100,58 +103,3 @@ $(document).ready(function(){
 //         // var storedTodos = JSON.parse(localStorage.getItem("todos"));
 
        
-
-
-//     //   key that represents every hour - key: value (getting saved to local storage)
-//     // JSON PARSE?
-
-//     // data name (property): 1
-//     // need append - set value of object
-//     // jasonToStoreLocallyForHours.one = textEnterIntoField -- after oject is declared
-
-//     // var jsonToStoreLocallyForHours = {
-//     //     one: "",
-//     //     two: "",
-//     //     three: "",
-//     //     four: "",
-//     //     five: "",
-//     //     six: "",
-//     //     seven: "",
-//     //     eight: "",
-//     //     nine: "",
-//     //     ten: "",
-//     //     eleven: "",
-//     //     twelve: ""
-//     // }
-
-
-        
-
-
-//     // // THEN the text for that event is saved in local storage
-//     // THEN the saved events persist
-//     // logic grab what user had entered, localstorage.get item
-
-// });
-
-// // raw HTML page
-// // jQuery
-// // Logic
-
-
-// // THEN I am presented with timeblocks for standard business hours
-//     // jQuery
-// // WHEN I view the timeblocks for that day
-// WHEN I click into a timeblock
-    // Logic .onclick
-// THEN I can enter an event
-// WHEN I click the save button for that timeblock
-    // logic .onclick and save/grab what user had entered
-// THEN the text for that event is saved in local storage
-// WHEN I refresh the page
-// THEN the saved events persist
-    // logic grab what user had entered, localstorage.get item
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-// ```
-
-// let root = document.documentElement;
